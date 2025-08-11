@@ -1,0 +1,94 @@
+{
+  "styles": {
+    "prefix": "styled",
+    "body": [
+      "import styled from 'styled-components';",
+      "",
+      "export const ${1:Container} = styled.${2:div}`",
+      "  ${3}",
+      "`;",
+      ""
+    ],
+    "description": "Create ReactJS Styled Components file"
+  },
+  "componentFunctionalCss": {
+    "prefix": "rafcs",
+    "body": [
+      "// import './styles';",
+      "",
+      "const ${1:${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}} = () => {",
+      "  return <div />;",
+      "}",
+      "",
+      "export default ${1:${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}};"
+    ],
+    "description": "Create ReactJS Functional Component"
+  },
+  "componentFunctionalTypescript": {
+    "prefix": "rfc",
+    "body": [
+      "import React from 'react';",
+      "",
+      "// import { Container } from './styles';",
+      "",
+      "function ${1:${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}}() {",
+      "  return <div />;",
+      "}",
+      "",
+      "export default ${1:${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}};"
+    ],
+    "description": "Create ReactJS Functional Component Typescript"
+  },
+
+  "componentArrowFunctionTypescript": {
+    "prefix": "rafc",
+    "body": [
+      "import React from 'react';",
+      "import PropTypes from 'prop-types'",
+      "import * as S from './styles';",
+      "",
+      "const ${1:${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}} = () => {",
+      "  return <S.Container></S.Container>;",
+      "}",
+      "",
+      "${1:${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}}.propTypes = {",
+      "",
+      "}",
+      "",
+      "export default ${1:${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}};"
+    ],
+    "description": "Create ReactJS Arrow Function Component Typescript"
+  },
+  "reactArrowFunctionFilenameComponent": {
+    "prefix": "raffc",
+    "body": [
+      "import React from 'react';",
+      "import PropTypes from 'prop-types'",
+      "import * as S from './styles';",
+      "",
+      "const ${1:${TM_FILENAME_BASE}} = () => {",
+      "  return <S.Container></S.Container>;",
+      "}",
+      "",
+      "${1:${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}}.propTypes = {",
+      "",
+      "}",
+      "",
+      "export default ${1:${TM_FILENAME_BASE}};"
+    ],
+    "description": "Create ReactJS Arrow Function Component with file's name"
+  },
+  "reactComponentTest": {
+    "prefix": "testc",
+    "body": [
+      "import React from 'react';",
+      "import { render } from '@testing-library/react'",
+      "import ${1:${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}} from './${1:${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}}'",
+      "",
+      "describe('Tests for ${1:${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}} Component', () => {",
+      "  it('Should', () => {});",
+      "})"
+    ],
+    "description": "Create ReactJS testing component with file's name"
+  }
+}

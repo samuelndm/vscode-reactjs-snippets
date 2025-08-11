@@ -1,0 +1,100 @@
+{
+  "styles": {
+    "prefix": "styled-react",
+    "body": [
+      "import styled from 'styled-components';",
+      "",
+      "export const ${1:Container} = styled.${2:div}`",
+      "  ${3}",
+      "`;",
+      ""
+    ],
+    "description": "Create ReactJS Styled Components file"
+  },
+  "componentFunctionalCss": {
+    "prefix": "rafcs",
+    "body": [
+      "// import './styles';",
+      "",
+      "const ${1:${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}} = () => {",
+      "  return <div />;",
+      "}",
+      "",
+      "export default ${1:${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}};"
+    ],
+    "description": "Create ReactJS Functional Component"
+  },
+  "componentFunctionalTypescript": {
+    "prefix": "rfc",
+    "body": [
+      "// import { Container } from './styles';",
+      "",
+      "const ${1:${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}}: React.FC = () => {",
+      "  return <div />;",
+      "}",
+      "",
+      "export default ${1:${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}};"
+    ],
+    "description": "Create ReactJS Functional Component Typescript"
+  },
+  "componentArrowFunctionTypescript": {
+    "prefix": "rafcc",
+    "body": [
+      "import * as S from './styles'",
+      "",
+      "type Props = {",
+      "  content?: any",
+      "}",
+      "",
+      "const ${1:${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}}: React.FC<Props> = ({ content }) => {",
+      "  return <S.Container></S.Container>",
+      "}",
+      "",
+      "export default ${1:${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}}"
+    ],
+    "description": "Create ReactJS Arrow Function Component Typescript"
+  },
+  "componentArrowFunctionTypescriptWithoutProps": {
+    "prefix": "rafc",
+    "body": [
+      "import * as S from './styles'",
+      "",
+      "const ${1:${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}}: React.FC = () => {",
+      "  return <S.Container></S.Container>",
+      "}",
+      "",
+      "export default ${1:${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}}"
+    ],
+    "description": "Create ReactJS Arrow Function Component Typescript"
+  },
+  "reactArrowFunctionFilenameComponent": {
+    "prefix": "raffc",
+    "body": [
+      "import * as S from './styles'",
+      "",
+      "const ${1:${TM_FILENAME_BASE}}: React.FC = () => {",
+      "  return <S.Container></S.Container>;",
+      "}",
+      "",
+      "export default ${1:${TM_FILENAME_BASE}}"
+    ],
+    "description": "Create ReactJS Arrow Function Component with file's name"
+  },
+  "componentArrowFunctionTypescriptStyleInFile": {
+    "prefix": "rafs",
+    "body": [
+      "import React from 'react';",
+      "",
+      "type Props = {",
+      "  content?: any;",
+      "}",
+      "",
+      "const ${1:${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}} = ({ content }: Props) => {",
+      "  return <div className=''></div>;",
+      "};",
+      "",
+      "export default ${1:${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}};"
+    ],
+    "description": "Create ReactJS Arrow Function Component Typescript"
+  }
+}
